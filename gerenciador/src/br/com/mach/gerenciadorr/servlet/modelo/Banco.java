@@ -1,4 +1,4 @@
-package br.com.mach.gerenciadorr.servlet;
+package br.com.mach.gerenciadorr.servlet.modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,8 +16,12 @@ public class Banco {
 		Empresa empresa2 = new Empresa();
 		empresa2.setId(chaveSequencial++);
 		empresa2.setNome("Caelum");
+		Empresa empresa3 = new Empresa();
+		empresa3.setId(chaveSequencial++);
+		empresa3.setNome("Mach");
 		lista.add(empresa);
 		lista.add(empresa2);
+		lista.add(empresa3);
 	}
 
 	public void adiciona(Empresa empresa) {

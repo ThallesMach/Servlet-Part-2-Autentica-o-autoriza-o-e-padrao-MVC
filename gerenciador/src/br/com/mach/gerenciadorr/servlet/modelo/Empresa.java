@@ -1,4 +1,4 @@
-package br.com.mach.gerenciadorr.servlet;
+package br.com.mach.gerenciadorr.servlet.modelo;
 
 import java.util.Date;
 
