@@ -14,7 +14,7 @@ public class MostraEmpresa {
 	
 	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("Mostra dados da Empresa");
+		System.out.println("_Ação Mostra dados da Empresa");
 		
 
 		String paramId = request.getParameter("id");
