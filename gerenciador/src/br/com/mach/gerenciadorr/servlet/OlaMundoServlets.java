@@ -29,16 +29,18 @@ public class OlaMundoServlets extends HttpServlet {
 		out.println("<br /> ");
 		out.println("Acessa pelo Link para ver a Lista de Empresas:");
 		out.println("<br /> ");
-		out.println("http://localhost:8080/gerenciador/listaEmpresas");
+//		out.println("http://localhost:8080/gerenciador/listaEmpresas");
+		out.println("http://localhost:8080/gerenciador/entrada?acao=ListaEmpresas");
 		out.println("<br /> "); 
-		out.println("-----------------------------------------------------------------------------------------------");
+		out.println("-----------------------------------------------------------------------------------------------------------");
 		out.println("<br /> ");
 		out.println("<br /> ");
-		out.println("Link para Add Nova Empresa:");	// http://localhost:8080/gerenciador/formNovaEmpresa.jsp
+		out.println("Link para Add Nova Empresa:");	//	http://localhost:8080/gerenciador/entrada?acao=NovaEmpresaForm
 		out.println("<br /> ");
-		out.println("http://localhost:8080/gerenciador/formNovaEmpresa.jsp");
+//		out.println("http://localhost:8080/gerenciador/formNovaEmpresa.jsp");
+		out.println("http://localhost:8080/gerenciador/entrada?acao=NovaEmpresaForm");
 		out.println("<br /> "); 
-		out.println("-----------------------------------------------------------------------------------------------");
+		out.println("-----------------------------------------------------------------------------------------------------------");
 		out.println("</body>");
 		out.println("</html>");
 		
