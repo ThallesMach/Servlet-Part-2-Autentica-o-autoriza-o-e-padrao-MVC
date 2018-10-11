@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.mach.gerenciadorr.servlet.modelo.Banco;
 
-public class RemoveEmpresa {
+public class RemoveEmpresa implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("_Ação Removendo Empresa");
 		
@@ -21,7 +21,8 @@ public class RemoveEmpresa {
 		Banco banco = new Banco();
 		banco.removeEmpresa(id);
 		
-		response.sendRedirect("entrada?acao=listaEmpresas");
+//		response.sendRedirect("entrada?acao=listaEmpresas");
+		return "redirect:entrada?acao=ListaEmpresas";
 
 	}
 

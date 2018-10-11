@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.mach.gerenciadorr.servlet.modelo.Banco;
 import br.com.mach.gerenciadorr.servlet.modelo.Empresa;
 
-public class MostraEmpresa {
+public class MostraEmpresa implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("Mostra dados da Empresa");
+		System.out.println("_Ação Mostra dados da Empresa");
 		
 
 		String paramId = request.getParameter("id");
@@ -27,9 +27,9 @@ public class MostraEmpresa {
 		System.out.println(empresa.getNome() );
 		
 		request.setAttribute("empresa", empresa);
-		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraEmpresa.jsp");
-		rd.forward(request, response);
-
+		
+		return "forward:/formAlteraEmpresa.jsp";
+		
 	}
 
 }
