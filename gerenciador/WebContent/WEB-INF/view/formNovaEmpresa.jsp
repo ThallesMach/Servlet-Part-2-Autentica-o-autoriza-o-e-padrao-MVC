@@ -10,6 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<br>
+	<c:import url="logout-parcial.jsp"/>
+	<br>
 	<form action="${linkEntradaServlet}" method="post">
 	
 		Nome: <input type="text" name="nome"/>
