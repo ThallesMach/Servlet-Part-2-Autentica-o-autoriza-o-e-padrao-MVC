@@ -29,14 +29,14 @@ public class UnicaEntradaServlet extends HttpServlet {
 		String	paramAcao = request.getParameter("acao"); //	http://localhost:8080/gerenciador/entrada?acao=ListaEmpresas
 		
 		
-		HttpSession sessao = request.getSession();
-		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") ==null );
-		boolean ehUmaAcaoProtegiada =  !(paramAcao.equals("Login") || paramAcao.equals("LoginForm") );
-		
-		if(ehUmaAcaoProtegiada && usuarioNaoEstaLogado ) {
-			response.sendRedirect( "entrada?acao=LoginForm" ); 
-			return;
-		}
+//		HttpSession sessao = request.getSession();
+//		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") ==null );
+//		boolean ehUmaAcaoProtegiada =  !(paramAcao.equals("Login") || paramAcao.equals("LoginForm") );
+//		
+//		if(ehUmaAcaoProtegiada && usuarioNaoEstaLogado ) {
+//			response.sendRedirect( "entrada?acao=LoginForm" ); 
+//			return;
+//		}
 				
 		
 		String nomeDaClasse = "br.com.mach.gerenciadorr.acao." + paramAcao;
