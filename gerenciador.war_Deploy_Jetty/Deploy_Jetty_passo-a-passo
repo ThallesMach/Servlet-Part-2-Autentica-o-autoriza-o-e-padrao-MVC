@@ -1,0 +1,39 @@
+
+
+
+
+# Deploy no Jetty
+
+jetty-distribution-9.4.12.v20180830
+
+Para start o WAR vai pelo Prompt de Comando ou do Terminal do seu sistema operacional, execute o JAR start.jar, que fica dentro da pasta do Jetty:
+
+java -jar start.jar
+
+Running Jetty
+
+https://www.eclipse.org/jetty/documentation/current/quickstart-running-jetty.html
+
+
+jetty-distribution-9.4.12.v20180830
+
+https://www.eclipse.org/jetty/download.html
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+--->>> Ola Mundo Servlets... // http://localhost:8080/gerenciador/olaa
+
+_Acessa Login: 
+http://localhost:8080/gerenciador/entrada?acao=LoginForm 
+------------------------------------------------------------------------------------------------------------- 
+
+Acessa pelo Link para ver a Lista de Empresas: 
+http://localhost:8080/gerenciador/entrada?acao=ListaEmpresas 
+------------------------------------------------------------------------------------------------------------- 
+
+Link para Add Nova Empresa: 
+http://localhost:8080/gerenciador/entrada?acao=NovaEmpresaForm 
+-------------------------------------------------------------------------------------------------------------
