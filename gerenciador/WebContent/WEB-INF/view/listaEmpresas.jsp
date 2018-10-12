@@ -11,6 +11,20 @@
 <title>Java Standard Taglib</title>
 </head>
 <body>
+	<br>
+	<c:import url="logout-parcial.jsp"/>
+
+	<br><!--  <br> é Quebra de Linha -->
+	Usuario Logado: ${usuarioLogado.login }
+	<br> 
+	<br>
+	
+	Cadastra nova empresa:
+	<a href="entrada?acao=NovaEmpresaForm" >Add</a>
+	<br>
+	<br>
+	<br> 
+	 
 	
 	<c:if test="${not empty empresa}">
 		Empresa ${ empresa } cadastrada com sucesso!

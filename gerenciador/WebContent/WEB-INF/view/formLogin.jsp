@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<br>
 	<form action="${linkEntradaServlet}" method="post">
 	
 		Login: <input type="text" name="login"/>
