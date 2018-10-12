@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.mach.gerenciadorr.servlet.modelo.Banco;
+import br.com.mach.gerenciadorr.modelo.Banco;
 
 public class RemoveEmpresa implements Acao {
 	
