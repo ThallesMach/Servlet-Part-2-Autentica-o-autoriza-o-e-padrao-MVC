@@ -9,13 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.thoughtworks.xstream.XStream;
-
 //import com.google.gson.Gson;
+import com.thoughtworks.xstream.XStream;
 
 import br.com.mach.gerenciadorr.modelo.Banco;
 import br.com.mach.gerenciadorr.modelo.Empresa;
 
+/**
+ * ver em XML	http://localhost:8080/gerenciador/empresas
+ * ver normal	http://localhost:8080/gerenciador/entrada?acao=LoginForm
+ * **/
 
 @WebServlet("/empresas")
 public class EmpresasServlet extends HttpServlet {
@@ -24,14 +27,35 @@ public class EmpresasServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		List<Empresa> empresas = new Banco().getEmpresas();
-		 
 		
-		XStream xstream = new XStream();		
-		xstream.alias("empresa", Empresa.class);
-		String xml = xstream.toXML(empresas);
+		String valor = request.getHeader("Accept");
 		
-		response.setContentType("application/Json");
-		response.getWriter().print(xml);
+		System.out.println(valor);
+		
+		if(valor.contains("xml") ) {		//	if(valor.endsWith("xml") ) {
+			XStream xstream = new XStream();		
+			xstream.alias("empresa", Empresa.class);
+			String xml = xstream.toXML(empresas);
+			
+			response.setContentType("application/xml");
+			response.getWriter().print(xml); 
+			
+			/*
+			 * }else if(valor.endsWith("application/json") ) {
+					Gson gson = new Gson();		//import com.google.gson.Gson;
+		            String json = gson.toJson(empresas);
+					
+					response.setContentType("application/Json");
+					response.getWriter().print(json);
+			 * */
+				
+			}else {
+				response.setContentType("application/Json");
+				response.getWriter().print("{'message':'no content'}");
+			}
+				
+		
+		
 		
 		// Não funciona com ->> Gson <<--
 //		Gson gson = new Gson();		//import com.google.gson.Gson;
