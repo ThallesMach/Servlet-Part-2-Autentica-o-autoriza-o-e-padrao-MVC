@@ -8,8 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.mach.gerenciadorr.servlet.modelo.Banco;
-import br.com.mach.gerenciadorr.servlet.modelo.Empresa;
+import br.com.mach.gerenciadorr.modelo.Banco;
+import br.com.mach.gerenciadorr.modelo.Empresa;
 
 //	http://localhost:8080/gerenciador/entrada?acao=ListaEmpresas
 public class ListaEmpresas implements Acao {
